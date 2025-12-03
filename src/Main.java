@@ -1,7 +1,5 @@
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -27,7 +25,7 @@ public class Main {
                     try{
                         int n = Integer.parseInt(sc.nextLine());
                         for(int i = 0; i < n; i++){
-                            Student s = Input.InputInfor(sc);
+                            Student s = InputInfor.InputInfor(sc);
                             service.addStudent(s);
                         }
                     }catch(NumberFormatException e){

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Input {
+public class InputInfor {
     public static Student InputInfor(Scanner sc){
         System.out.println("\nInput student");
         System.out.println("Select type: 1. Regular | 2. In-Service ");
