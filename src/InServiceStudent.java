@@ -1,27 +1,23 @@
-import java.util.*;
-
 public class InServiceStudent extends Student{
     private String trainingLocation;
 
-    public InServiceStudent(){
-        super();
+    public InServiceStudent(String studentID, String name, String dateOfBirth, int admissionYear, double entranceScore, String trainingLocation){
+        super(studentID, name, dateOfBirth, admissionYear, entranceScore );
+        this.trainingLocation = trainingLocation;
     }
 
     @Override
-    public void inputInfor(Scanner sc){
-        super.inputInfor(sc);
-        System.out.print("Enter Training Location: ");
-        this.trainingLocation = sc.nextLine();
+    public String toFileString() {
+        return "INSERVICE," + getStudentID() + "," + getName() + "," + getDateOfBirth() + "," + getAdmissionYear() + "," + getEntranceScore() + "," + getTrainingLocation();
+    }
+
+    public String getTrainingLocation() {
+        return trainingLocation;
     }
 
     @Override
-    public void outputInfor(){
-        super.outputInfor();
-        System.out.printf("Type: In Service, Training Location: %s", trainingLocation);
+    public String toString() {
+        return super.toString() + ", Type: In - Service, Location: " + trainingLocation;
     }
 
-    @Override
-    public String getStudentType() {
-        return "InService";
-    }
 }

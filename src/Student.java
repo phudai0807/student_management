@@ -1,33 +1,47 @@
 import java.util.*;
 
-public abstract class Student implements StudentActions{
+public abstract class Student{
     private String studentID;
     private String name;
     private String dateOfBirth;
     private int admissionYear;
     private double entranceScore;
 
-    public Student(){
+    public Student(String studentID, String name, String dateOfBirth, int admissionYear, double entranceScore){
+        this.studentID = studentID;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.admissionYear = admissionYear;
+        this.entranceScore = entranceScore;
+    }
 
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public int getAdmissionYear() {
+        return admissionYear;
+    }
+
+    public double getEntranceScore() {
+        return entranceScore;
+    }
+
+    public String toFileString() {
+        return "";
     }
 
     @Override
-    public void inputInfor(Scanner sc){
-        System.out.print("Enter Student ID: ");
-        this.studentID = sc.nextLine();
-        System.out.print("Enter Full Name: ");
-        this.name = sc.nextLine();
-        System.out.print("Enter Date of Birth: ");
-        this.dateOfBirth = sc.nextLine();
-        System.out.print("Enter Admission Year: ");
-        this.admissionYear = Integer.parseInt(sc.nextLine());
-        System.out.print("Enter Entrance Score: ");
-        this.entranceScore = Double.parseDouble(sc.nextLine());
-    }
-
-    @Override
-    public void outputInfor(){
-        System.out.printf("ID: %s , Name: %s , Date Of Birth: %s , Admission Year: %d , Entrance Score: %f ",
+    public String toString(){
+        return String.format("ID: %s, Name: %s, Date of Birth: %s, Year: %d, Score: %s",
                 studentID, name, dateOfBirth, admissionYear, entranceScore);
     }
 }

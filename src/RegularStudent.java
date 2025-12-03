@@ -1,23 +1,17 @@
 import java.util.*;
 
 public class RegularStudent extends Student{
-    public RegularStudent(){
-        super();
+    public RegularStudent(String studentID, String name, String dateOfBirth, int admissionYear, double entranceScore){
+        super(studentID, name, dateOfBirth, admissionYear, entranceScore );
     }
 
     @Override
-    public void inputInfor(Scanner sc) {
-        super.inputInfor(sc);
+    public String toString() {
+        return super.toString() + ", Type: Regular";
     }
 
     @Override
-    public void outputInfor(){
-        super.outputInfor();
-        System.out.println("Type: Regular");
-    }
-
-    @Override
-    public String getStudentType() {
-        return "Regular";
+    public String toFileString() {
+        return "REGULAR," + getStudentID() + "," + getName() + "," + getDateOfBirth() + "," + getAdmissionYear() + "," + getEntranceScore();
     }
 }

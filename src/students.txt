@@ -1,0 +1,2 @@
+REGULAR,Nguyen Van A,Nguyen Van A,08/07/2005,2023,26.55
+INSERVICE,444,Nguyen Van B,19/04.1994,2022,22.55,Hai Phong
